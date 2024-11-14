@@ -67,6 +67,3 @@ ScrollReveal().reveal(".socials span", {
   interval: 500,
 });
 
-function goToProductPage() {
-     window.location.href = 'URL_OF_PRODUCT_PAGE';
-     }
