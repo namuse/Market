@@ -11,23 +11,47 @@
         <input type="checkbox" id="switch" checked>
 
     <div class="signup">
-        <form action="">
+        <form id="signUpForm" onsubmit="handleSignUp(event)">
             <label for="switch">Sign Up</label>
-            <input type="email" placeholder="Email" autocomplete="off">
-            <input type="text" placeholder="Username" autocomplete="off">
-            <input type="password" placeholder="Password" autocomplete="off">
-            <button>Sign Up</button>
+            <input type="email" id="signUpEmail" placeholder="Email" autocomplete="off">
+            <input type="text" id="signUpUsername" placeholder="Username" autocomplete="off">
+            <input type="password" id="signUpPassword" placeholder="Password" autocomplete="off">
+            <button type="submit">Sign Up</button>
         </form>
     </div>
 
     <div class="login">
-        <form action="">
+        <form id="loginForm" onsubmit="handleLogin(event)">
             <label for="switch">Login</label>
-            <input type="text" placeholder="Username" autocomplete="off">
-            <input type="password" placeholder="Password" autocomplete="off">
-            <button>Login</button>
+            <input type="text" id="loginUsername" placeholder="Username" autocomplete="off">
+            <input type="password" id="loginPassword" placeholder="Password" autocomplete="off">
+            <button type="submit">Login</button>
         </form>
     </div>
     </div>
+    <script>
+        function handleLogin(event) { 
+            event.preventDefault(); 
+            const username = document.getElementById('loginUsername').value; 
+            const password = document.getElementById('loginPassword').value; 
+            if (username === 'correctUsername' && password === 'correctPassword') { 
+                window.location.href = 'index.html'; 
+            } else { 
+                alert('Invalid username or password'); 
+            } 
+        }
+
+        function handleSignUp(event) { 
+            event.preventDefault(); 
+            const email = document.getElementById('signUpEmail').value;
+            const username = document.getElementById('signUpUsername').value; 
+            const password = document.getElementById('signUpPassword').value; 
+            console.log('Email:', email); 
+            console.log('Username:', username); 
+            console.log('Password:', password); 
+            alert('Sign Up Successful!');
+            window.location.href = 'index.html'; 
+        }
+    </script>
 </body>
 </html>

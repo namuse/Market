@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Market</title>
+    <link rel="stylesheet" href="by.css">
 </head>
 <body>
     <br>
@@ -20,9 +21,21 @@
          <div class="tab-contents active-tab" id="All">
              <ul>
                  <div class="photo-container">
-                     <img src="images/p3.png">
-                     <img src="images/p4.png">
-                     <img src="images/p5.png">
+                     <img src="images/p1.jpg">
+                     <img src="images/p2.jpg">
+                     <img src="images/p3.jpg">
+                     <img src="images/p4.jpg">
+                     <img src="images/p5.jpg">
+                     <img src="images/p6.jpg">
+                     <img src="images/p7.jpg">
+                     <img src="images/p8.jpg">
+                     <img src="images/p9.jpg">
+                     <img src="images/p10.jpg">
+                     <img src="images/p11.jpg">
+                     <img src="images/p12.jpg">
+                     <img src="images/p13.jpg">
+                     <img src="images/p14.jpg">
+                     <img src="images/p15.jpg">
                      
                    </div>
              </ul>
@@ -30,8 +43,12 @@
          <div class="tab-contents " id="Art">
              <ul>
                  <div class="photo-container">
-                     
-                     <img src="images/p3.png">
+                    <img src="images/p3.jpg">
+                    <img src="images/p5.jpg">
+                    <img src="images/p8.jpg">
+                    <img src="images/p11.jpg">
+                    <img src="images/p12.jpg">
+                    <img src="images/p13.jpg">
                      
                      
                    </div>
@@ -40,8 +57,11 @@
          <div class="tab-contents" id="Beadwork">
              <ul>
                  <div class="photo-container">
-                     
-                     <img src="images/p4.png">
+                    <img src="images/p1.jpg">
+                    <img src="images/p2.jpg">
+                    <img src="images/p6.jpg">
+                    <img src="images/p15.jpg">
+                    <img src="images/p10.jpg">
                      
                    </div>
              </ul>
@@ -50,7 +70,10 @@
              <ul>
                  <div class="photo-container">
                      
-                     <img src="images/p5.png">
+                    <img src="images/p4.jpg">
+                    <img src="images/p7.jpg">
+                    <img src="images/p9.jpg">
+                    <img src="images/p14.jpg">
                      
                    </div>
              </ul>
@@ -59,5 +82,19 @@
          </div>
      </div>
     </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-link");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for( tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+       </script>
 </body>
 </html>
